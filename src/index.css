@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background:linear-gradient(120deg, #5aa6e4, #71d87f) ;
+    color: white;
+    min-height: 100vh;
+    transition: all 0.5s;
+    transition-property: inherit;
+}
+
+ol,ul {
+    padding-left: 20px;
+}
+
+.board-row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.status {
+    margin-top: 10px;
+}
+
+.square {
+    background: rgb(206, 247, 243);
+    border: 1px solid rgb(129, 157, 235);
+    border-radius: 20%;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 50px;
+    padding: 0;
+    text-align: center;
+    width: 50px;
+    opacity: 0.67;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.kbd-navigation .square:focus {
+    background: rgb(203, 247, 248);
+}
+
+.game {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-info {
+    margin-left: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+.game-info ol {
+    list-style: none;
+}
+.game-info button {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #3a3a39, #c2c2c2);
+    width: 100%;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 12px;
+    transform-origin: center;
+    transition: all 0.5s ease-in-out;
+}
+.game-info button:hover {
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(120deg, #d88771, #e2c35d);
+    transform: rotate(5deg) scale(1.1);
+}
+
+@media screen and (max-width: 320px){
+    .game{
+        position: fixed;
+        margin-left: 5px;
+    }
+    .game-info{
+        margin-left: 0;
+        margin-right: 5px;
+    }
+    .game-info button {
+        padding: 6px;
+        margin: 8px;
+    }
+    .game-info button:hover {
+        transform: rotate(4deg) scale(1.1);
+        pointer-events: visible;
+    }
+    .square {
+        height: 40px;
+        width: 40px;
+    }
+}
