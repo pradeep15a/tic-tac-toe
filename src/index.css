@@ -41,7 +41,6 @@ ol,ul {
     padding: 0;
     text-align: center;
     width: 50px;
-    opacity: 0.67;
 }
 
 .square:focus {
